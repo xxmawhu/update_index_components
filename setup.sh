@@ -1,5 +1,8 @@
+source /miniconda/bin/activate base
 current_dir=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 export PYTHONPATH=${current_dir}:$PYTHONPATH
 export RQSDK_LICENSE=tcp://license:I0owPDZEqqn5JJavOG_LJ7u_hjZCEfI8SnszDzoCBo__9Ovxf9qp36ELeJfCetqK4QJykuEnK2n_5crRX5J20UBwIjqrrSILOF-6O6uWBAp5rVPtO0RJL97U6UmSkFeEalhOFsuzdkdz5KJQPXExklJYF2fhsMUjihuxvhOLJPg=d7b-Cw3lfKEoGQi3Wk4sZoK4bdQQ5pbg_wgjV9xBKPX1WaF_YuN2nCMZZzsC9mzn2KI34pn8m5GyBWGRx-m6bL-QV0Winlg0KnabKBCglCbMJXAP5JfSgwWiqgF1Zk9HrpoZOsiR74mIVCKNnRL3OO7PJLeEjVxASnjN5Rom0ik=@rqdatad-pro.ricequant.com:16011
 export RQDATAC_CONF=tcp://license:I0owPDZEqqn5JJavOG_LJ7u_hjZCEfI8SnszDzoCBo__9Ovxf9qp36ELeJfCetqK4QJykuEnK2n_5crRX5J20UBwIjqrrSILOF-6O6uWBAp5rVPtO0RJL97U6UmSkFeEalhOFsuzdkdz5KJQPXExklJYF2fhsMUjihuxvhOLJPg=d7b-Cw3lfKEoGQi3Wk4sZoK4bdQQ5pbg_wgjV9xBKPX1WaF_YuN2nCMZZzsC9mzn2KI34pn8m5GyBWGRx-m6bL-QV0Winlg0KnabKBCglCbMJXAP5JfSgwWiqgF1Zk9HrpoZOsiR74mIVCKNnRL3OO7PJLeEjVxASnjN5Rom0ik=@rqdatad-pro.ricequant.com:16011
+export COMPONENTSPATH=/home/cwj/workspace/update_index_components
 PYTHON='/miniconda/bin/python -Wignore'
+python "$COMPONENTSPATH/acquire_index_components.py" > "$COMPONENTSPATH/check.txt"
